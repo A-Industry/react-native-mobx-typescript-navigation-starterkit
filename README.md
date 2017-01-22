@@ -15,7 +15,7 @@ Inspired by [ReactNativeTS](https://github.com/mrpatiwi/ReactNativeTS/)
 Clone this repository:
 
 ```sh
-git clone https://github.com/BSWG/react-native-mobx-typescript-navigation-starterkit
+git clone https://github.com/BSWG/react-native-mobx-typescript-navigation-starterkit.git
 cd react-native-mobx-typescript-navigation-starterkit
 ```
 
