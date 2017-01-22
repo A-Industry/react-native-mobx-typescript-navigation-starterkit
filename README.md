@@ -1,12 +1,12 @@
-# ReactNativeTS
+# A starting point for rapid app development without al the Recdux stuff
 
-[![Build Status][ci-image]][ci-url] [![dependencies][dependencies-image]][dependencies-url] [![dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
+Don't get me wrong here. I do think the architecture of Redux is great and superior in keeping your async app bugfree.
+But I'm not working a product oriented organization and I need to get my projects done before time runs out. I hope this starting point 
 
-Minimal template of a [React Native](https://facebook.github.io/react-native/) project with [Typescript](https://www.typescriptlang.org/).
 
-![preview](https://github.com/mrpatiwi/ReactNativeTS/raw/images/preview.png)
+Inspired by [ReactNativeTS](https://github.com/mrpatiwi/ReactNativeTS/)
 
-> Recommended usage with [VSCode](https://code.visualstudio.com/)
+> This project is mainly configured to work well with [Webstorm](https://www.jetbrains.com/webstorm/)
 
 ## Getting Started
 
@@ -15,8 +15,8 @@ Minimal template of a [React Native](https://facebook.github.io/react-native/) p
 Clone this repository:
 
 ```sh
-git clone https://github.com/mrpatiwi/ReactNativeTS.git
-cd ReactNativeTS
+git clone https://github.com/BSWG/react-native-mobx-typescript-navigation-starterkit
+cd react-native-mobx-typescript-navigation-starterkit
 ```
 
 Install dependencies:
@@ -31,31 +31,33 @@ Start React Native server:
 yarn start
 ```
 
-Build the source-code with Typescript:
-
-```sh
-# Build once
-yarn run build
-
-# Build and watch for changes
-yarn run build -- --watch
-```
-
 ### iOS
 
 ```sh
-yarn run ios
+yarn watch-ios
 ```
 
 ### Android
 
 ```sh
-yarn run android
+yarn watch-android
 ```
+ 
 
-[ci-image]: https://travis-ci.org/mrpatiwi/ReactNativeTS.svg
-[ci-url]: https://travis-ci.org/mrpatiwi/ReactNativeTS
-[dependencies-image]: https://david-dm.org/mrpatiwi/ReactNativeTS.svg
-[dependencies-url]: https://david-dm.org/mrpatiwi/ReactNativeTS
-[dev-dependencies-image]: https://david-dm.org/mrpatiwi/ReactNativeTS/dev-status.svg
-[dev-dependencies-url]: https://david-dm.org/mrpatiwi/ReactNativeTS#info=devDependencies
+This starter kit comes with a few batteries included:
+
+* RXJS: For async streams
+* Axios: Configuring and executing network calls
+* InversifyJS: Dependency Injection with support for React Components
+* Mobx: Observable stores
+* react-native-navigation: Native navigation for iOS and Android
+* react0native-vector-icons: Use icon fonts with React Native
+* react-native-i18n: Handle translations based on device language.
+* react-native-animatable: Ready to go animations. For an example see the render function of the user list.
+* react-native-elements: Additional elements
+* Serializr: Use domain classes instead of JS plain objects. Use the ApiGateway class to fetch and deserialize data.
+
+## TODO
+ * Currently tsc --watch is not killed when yarn watch-ios or android is stopped.
+ * Production/Release builds
+ * Rename project

@@ -1,6 +1,4 @@
-'use strict'
+import "babel-polyfill";
 
-import { AppRegistry } from 'react-native'
 import App from './build'
-
-AppRegistry.registerComponent('ReactNativeTS', () => App)
+const app = new App();

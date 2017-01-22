@@ -1,24 +1,41 @@
 {
   "name": "ReactNativeTS",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "rm -rf typings",
-    "postinstall": "node node_modules/typings/dist/bin.js install",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prebuild": "rm -rf build",
-    "build": "tsc"
+    "build": "tsc",
+    "watch-android": "tsc --watch & yarn android",
+    "watch-ios": "tsc --watch & react-native run-ios --simulator=\"iPhone SE\""
   },
   "dependencies": {
-    "react": "^15.4.1",
-    "react-native": "^0.38.1",
-    "react-native-button": "^1.7.1"
+    "@reactivex/rxjs": "5.0.3",
+    "@types/react": "15.0.0",
+    "@types/react-native": "0.37.7",
+    "axios": "0.15.3",
+    "inversify": "3.0.0",
+    "inversify-inject-decorators": "3.0.0-beta.2",
+    "mobx": "3.0.0",
+    "mobx-react": "4.1.0",
+    "react": "15.4.2",
+    "react-native": "^0.39.2",
+    "react-native-animatable": "^1.1.0",
+    "react-native-button": "1.7.1",
+    "react-native-elements": "^0.9.3",
+    "react-native-i18n": "0.1.1",
+    "react-native-navigation": "^2.0.0-experimental.181",
+    "react-native-vector-icons": "^4.0.0",
+    "redux": "3.6.0",
+    "reflect-metadata": "0.1.9",
+    "serializr": "1.1.9"
   },
   "devDependencies": {
-    "tslint": "^4.0.2",
-    "typescript": "^2.0.10",
-    "typings": "^2.0.0"
+    "babel-polyfill": "^6.22.0",
+    "tslint": "4.3.1",
+    "typescript": "2.1.5",
+    "typings": "2.1.0"
   }
 }
